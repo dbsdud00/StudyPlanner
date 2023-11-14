@@ -1,0 +1,25 @@
+div.Nav {
+  position: absolute;
+  display: flex;
+  font-size: 20px;
+  font-weight: 800;
+  bottom: 100%;
+  right: 20px;
+  & div {
+    padding: 7px 15px;
+    margin: 0 10px;
+    background-color: #d4d8e9;
+    border: 1px solid #838383;
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    cursor: pointer;
+    height: 35px;
+    transition: 0.2s;
+  }
+  & div:hover {
+    background-color: #fff;
+  }
+  & div.nowTab {
+    background-color: #fff;
+  }
+}
