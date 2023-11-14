@@ -1,0 +1,11 @@
+li {
+  margin: 5px;
+  padding: 5px;
+  transition: 0.1s;
+  cursor: pointer;
+  font-family: "GangwonState";
+
+  &:hover {
+    background-color: #e2eaf2;
+  }
+}

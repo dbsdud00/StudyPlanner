@@ -1,6 +1,10 @@
-import { useState } from "react";
-import Button from "../components/Button";
+import { Outlet } from "react-router-dom";
 import "../css/App.css";
+import calendarSlice, { addDate } from "../feature/calendarSlice";
+import { useEffect } from "react";
+import PlannerContents from "./PlannerContents";
+import Calendar from "../components/Calendar";
+
 const Main = () => {
   return (
     <div className="main_content">
@@ -13,37 +17,8 @@ const Main = () => {
         <h1>Study Planner</h1>
       </div>
       <div className="appBody">
-        <div className="appBodyLeft">
-          <ul className="studyDateList">printDateList</ul>
-        </div>
-        <div className="appBodyRight">
-          <div className="studyHeader">
-            <h3>nowDate</h3>
-            <h3>%</h3>
-          </div>
-
-          <div className="studyInput">
-            <div>X</div>
-            <div className="subjectMenu">
-              <input name="td_subject" type="text" placeholder="과목" />
-            </div>
-            <div className="studyInputBox">
-              <input name="td_content" type="text" placeholder="content" />
-            </div>
-
-            <div className="studyPlus">추가</div>
-          </div>
-          <div className="studyList">
-            <table>
-              <thead>
-                <tr>
-                  <th colSpan="4">JavaScript</th>
-                </tr>
-              </thead>
-              <tbody>printTodoList</tbody>
-            </table>
-          </div>
-        </div>
+        <Calendar />
+        <Outlet />
       </div>
     </div>
   );
